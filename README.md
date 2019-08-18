@@ -42,7 +42,7 @@ To use the new formatter, register the formatter in `config/packages/sonata_form
 sonata_formatter:
     formatters:
         commonmark:
-            service: core23_commonmark.formatter
+            service: core23_commonmark_formatter.formatter
 ```
 
 ## Add markdown extensions
@@ -52,7 +52,7 @@ If you want to use some [Github-Flavored Markdown extensions], you need download
 ```yaml
 services:
     League\CommonMark\Extras\CommonMarkExtrasExtension:
-        tags: [ 'core23_commonmark.extension' ]
+        tags: [ 'core23_commonmark_formatter.extension' ]
 ```
 
 [commonmark]: https://github.com/thephpleague/commonmark

@@ -17,13 +17,13 @@ final class ExtensionCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container): void
     {
-        if (!$container->hasDefinition('core23_commonmark.environment')) {
+        if (!$container->hasDefinition('core23_commonmark_formatter.environment')) {
             return;
         }
 
-        $definition = $container->getDefinition('core23_commonmark.environment');
+        $definition = $container->getDefinition('core23_commonmark_formatter.environment');
 
-        foreach ($container->findTaggedServiceIds('core23_commonmark.extension') as $id => $tag) {
+        foreach ($container->findTaggedServiceIds('core23_commonmark_formatter.extension') as $id => $tag) {
             $definition->addMethodCall('addExtension', [new Reference($id)]);
         }
     }

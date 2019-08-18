@@ -23,12 +23,12 @@ class Core23CommonMarkFormatterExtensionTest extends AbstractExtensionTestCase
     {
         $this->load();
 
-        $this->assertContainerBuilderHasService('core23_commonmark.formatter', CommonMarkFormatter::class);
+        $this->assertContainerBuilderHasService('core23_commonmark_formatter.formatter', CommonMarkFormatter::class);
 
-        $this->assertContainerBuilderHasService('core23_commonmark.environment', Environment::class);
-        $this->assertContainerBuilderHasService('core23_commonmark.doc_parser', DocParser::class);
-        $this->assertContainerBuilderHasService('core23_commonmark.html_render', HtmlRenderer::class);
-        $this->assertContainerBuilderHasService('core23_commonmark.converter', Converter::class);
+        $this->assertContainerBuilderHasService('core23_commonmark_formatter.environment', Environment::class);
+        $this->assertContainerBuilderHasService('core23_commonmark_formatter.doc_parser', DocParser::class);
+        $this->assertContainerBuilderHasService('core23_commonmark_formatter.html_render', HtmlRenderer::class);
+        $this->assertContainerBuilderHasService('core23_commonmark_formatter.converter', Converter::class);
     }
 
     protected function getContainerExtensions(): array

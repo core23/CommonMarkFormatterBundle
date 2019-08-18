@@ -18,7 +18,7 @@ final class Core23CommonMarkFormatterExtension extends Extension
 {
     public function getAlias(): string
     {
-        return 'core23_commonmark';
+        return 'core23_commonmark_formatter';
     }
 
     public function load(array $configs, ContainerBuilder $container): void
