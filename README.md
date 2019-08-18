@@ -1,7 +1,5 @@
 CommonMarkFormatterBundle
 =========================
-
-
 [![Latest Stable Version](https://poser.pugx.org/core23/commonmark-formatter-bundle/v/stable)](https://packagist.org/packages/core23/commonmark-formatter-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/core23/commonmark-formatter-bundle/v/unstable)](https://packagist.org/packages/core23/commonmark-formatter-bundle)
 [![License](https://poser.pugx.org/core23/commonmark-formatter-bundle/license)](https://packagist.org/packages/core23/commonmark-formatter-bundle)
@@ -15,7 +13,7 @@ CommonMarkFormatterBundle
 [![Code Climate](https://codeclimate.com/github/core23/CommonMarkFormatterBundle/badges/gpa.svg)](https://codeclimate.com/github/core23/CommonMarkFormatterBundle)
 [![Coverage Status](https://coveralls.io/repos/core23/CommonMarkFormatterBundle/badge.svg)](https://coveralls.io/r/core23/CommonMarkFormatterBundle)
 
-This bundle provides a commonmark formatter for the [Sonata FormatterBundle].
+This bundle provides a [commonmark] formatter for the [Sonata FormatterBundle].
 
 ## Installation
 
@@ -49,7 +47,7 @@ sonata_formatter:
 
 ## Add markdown extensions
 
-If you want to use some [Github-Flavored Markdown extensions](https://github.com/thephpleague/commonmark-extras), you just need to register them inside the `config/services.yaml` file of your project:
+If you want to use some [Github-Flavored Markdown extensions], you need download the extension and register it inside the `config/services.yaml` file of your project:
 
 ```yaml
 services:
@@ -57,4 +55,6 @@ services:
         tags: [ 'core23_commonmark.extension' ]
 ```
 
+[commonmark]: https://github.com/thephpleague/commonmark
 [Sonata FormatterBundle]: https://github.com/sonata-project/SonataFormatterBundle
+[Github-Flavored Markdown extensions]: https://github.com/thephpleague/commonmark-extras
