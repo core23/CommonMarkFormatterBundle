@@ -14,16 +14,17 @@ namespace Core23\CommonMarkFormatterBundle;
 use Core23\CommonMarkFormatterBundle\DependencyInjection\Compiler\ExtensionCompilerPass;
 use Core23\CommonMarkFormatterBundle\DependencyInjection\Core23CommonMarkFormatterExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class Core23CommonMarkFormatterBundle extends Bundle
 {
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         $container->addCompilerPass(new ExtensionCompilerPass());
     }
 
-    public function getContainerExtension()
+    public function getContainerExtension(): ?ExtensionInterface
     {
         if (null === $this->extension) {
             $this->extension = new Core23CommonMarkFormatterExtension();

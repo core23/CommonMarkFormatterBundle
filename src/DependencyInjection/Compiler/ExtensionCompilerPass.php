@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\Reference;
 
 final class ExtensionCompilerPass implements CompilerPassInterface
 {
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('core23_commonmark.environment')) {
             return;

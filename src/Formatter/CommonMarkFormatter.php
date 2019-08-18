@@ -18,7 +18,7 @@ final class CommonMarkFormatter extends BaseFormatter
     /**
      * @var ConverterInterface
      */
-    protected $converter;
+    private $converter;
 
     public function __construct(ConverterInterface $converter)
     {
