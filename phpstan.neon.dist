@@ -1,0 +1,15 @@
+parameters:
+    level: max
+
+    paths:
+        - src
+        - tests
+
+    autoload_files:
+        - vendor-bin/test/vendor/autoload.php
+
+    ignoreErrors:
+        # PHPUnit
+        -
+            message: '#Property .*::\$.* has no typehint specified.#'
+            path: tests/

@@ -1,0 +1,61 @@
+{
+  "name": "core23/commonmark-formatter-bundle",
+  "type": "symfony-bundle",
+  "description": "This bundle provides a commonmark formatter for the Sonata FormatterBundle.",
+  "keywords": [
+    "symfony",
+    "formatter",
+    "markdown",
+    "sonata",
+    "commonmark"
+  ],
+  "homepage": "https://core23.de",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christian Gripp",
+      "email": "mail@core23.de"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "league/commonmark": "^1.0",
+    "sonata-project/formatter-bundle": "^4.0",
+    "symfony/config": "^3.4 || ^4.2",
+    "symfony/dependency-injection": "^3.4 || ^4.2",
+    "symfony/expression-language": "^3.4 || ^4.2",
+    "symfony/framework-bundle": "^3.4 || ^4.2",
+    "symfony/http-foundation": "^3.4 || ^4.2",
+    "symfony/http-kernel": "^3.4 || ^4.2"
+  },
+  "require-dev": {
+    "bamarni/composer-bin-plugin": "^1.2",
+    "sllh/composer-lint": "^1.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Core23\\CommonMarkFormatterBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Core23\\CommonMarkFormatterBundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@composer bin all install --ansi"
+    ],
+    "post-update-cmd": [
+      "@composer bin all update --ansi"
+    ]
+  }
+}
