@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <services>
-    <service id="core23_commonmark.environment" class="League\CommonMark\Environment">
+    <service id="core23_commonmark_formatter.environment" class="League\CommonMark\Environment">
       <factory class="League\CommonMark\Environment" method="createCommonMarkEnvironment"/>
     </service>
-    <service id="core23_commonmark.doc_parser" class="League\CommonMark\DocParser">
-      <argument type="service" id="core23_commonmark.environment"/>
+    <service id="core23_commonmark_formatter.doc_parser" class="League\CommonMark\DocParser">
+      <argument type="service" id="core23_commonmark_formatter.environment"/>
     </service>
-    <service id="core23_commonmark.html_render" class="League\CommonMark\HtmlRenderer">
-      <argument type="service" id="core23_commonmark.environment"/>
+    <service id="core23_commonmark_formatter.html_render" class="League\CommonMark\HtmlRenderer">
+      <argument type="service" id="core23_commonmark_formatter.environment"/>
     </service>
-    <service id="core23_commonmark.converter" class="League\CommonMark\Converter">
-      <argument type="service" id="core23_commonmark.doc_parser"/>
-      <argument type="service" id="core23_commonmark.html_render"/>
+    <service id="core23_commonmark_formatter.converter" class="League\CommonMark\Converter">
+      <argument type="service" id="core23_commonmark_formatter.doc_parser"/>
+      <argument type="service" id="core23_commonmark_formatter.html_render"/>
     </service>
   </services>
 </container>
