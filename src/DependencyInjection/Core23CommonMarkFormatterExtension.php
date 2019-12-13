@@ -21,6 +21,9 @@ final class Core23CommonMarkFormatterExtension extends Extension
         return 'core23_commonmark_formatter';
     }
 
+    /**
+     * @param array<mixed> $configs
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
