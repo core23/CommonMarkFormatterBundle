@@ -1,0 +1,21 @@
+framework:
+    secret: secret
+
+twig:
+    paths:
+        - '%kernel.project_dir%/templates'
+
+sonata_formatter:
+    default_formatter: commonmark
+
+    formatters:
+        commonmark:
+            service: core23_commonmark_formatter.formatter
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Core23\CommonMarkFormatterBundle\Tests\App\Controller\TwigTestController:
+        tags:
+            - controller.service_arguments
