@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Core23\CommonMarkFormatterBundle\Formatter;
 
 use League\CommonMark\ConverterInterface;
+use RuntimeException;
 use Sonata\FormatterBundle\Extension\ExtensionInterface;
 use Sonata\FormatterBundle\Formatter\BaseFormatter;
 
@@ -34,7 +35,7 @@ final class CommonMarkFormatter extends BaseFormatter
 
     public function addExtension(ExtensionInterface $extensionInterface): void
     {
-        throw new \RuntimeException('Extensions are not yet supported');
+        throw new RuntimeException('Extensions are not yet supported');
     }
 
     public function getExtensions(): array
